@@ -103,7 +103,7 @@ open class RealmStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoca
     final func handleChange<T>(_ change: RealmCollectionChange<T>, inSection: Int)
     {
         if case RealmCollectionChange.initial(_) = change {
-            delegate?.storageNeedsReloading()
+            //delegate?.storageNeedsReloading()
             return
         }
         guard case let RealmCollectionChange.update(_, deletions, insertions, modifications) = change else {
